@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+*{
+    margin:0;
+    /* background-image:url('./app/imagenes/fondo.jpg'); */
+   
+    overflow: hidden !important;
+}
+body{
+    background-color: blueviolet;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

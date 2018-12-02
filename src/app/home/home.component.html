@@ -1,0 +1,30 @@
+<mat-card class="principal-card">
+    <mat-card-content>
+        <div class="formRegistry">
+            <form [formGroup]="registryVehicle" (ngSubmit)="onSubmit()">
+                <mat-form-field class="field">
+                    <input type="text" matInput placeholder="Licence" name="licence" [(ngModel)]="vehicle.licence"
+                        class="form-control" formControlName="licence" [errorStateMatcher]="matcher">
+                    <mat-error class="error" *ngIf="registryVehicle.controls.licence.hasError('required')">
+                        please, complete all the fields
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="field">
+                    <mat-select placeholder="Select Vehicle">
+                        <mat-option *ngFor="let type of vehicleType" [value]="type">{{type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="field">
+                    <input type="text" matInput placeholder="Engine" name="engine" [(ngModel)]="vehicle.engine" class="form-control"
+                        formControlName="engine" [errorStateMatcher]="matcher">
+                    <mat-error class="error" *ngIf="registryVehicle.controls.engine.hasError('required')">
+                        please, complete all the fields
+                    </mat-error>
+                </mat-form-field>
+                <br>
+                <button mat-button class="button-save" type="submit" [disabled]="!registryVehicle.valid">Save Car</button>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,21 @@
+.principal-card{
+    background-color: transparent !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 80vh;
+    border-color: azure;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 10%;
+    padding: 0px;
+}
+.field {
+    color: black !important;
+}
+.button-save{
+    background-color: brown !important;
+}
+.formRegistry{
+    background-color: aqua;
+}
