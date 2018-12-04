@@ -1,9 +1,9 @@
 .principal-card{
-    background-color: transparent !important;
+    background-color: blue;;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    height: 80vh;
+    width: 70%;
+    height: 30vh;
     border-color: azure;
     border-width: 1px;
     border-style: solid;
@@ -17,5 +17,19 @@
     background-color: brown !important;
 }
 .formRegistry{
+    height: 100%;
     background-color: aqua;
+}
+.tableParking{
+    width: 70vw;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: crimson;
+    border-color: azure;
+    border-width: 1px;
+    border-style: solid;
+}
+.mat-form-field{
+    margin: 20px;
 }
