@@ -42,11 +42,13 @@ export class HomeComponent implements OnInit {
   }
 
   generatePayment() {
-    console.log(this.vehiclePayment);
+    this.homeService.generatePayment(this.vehiclePayment).subscribe(v => console.log(v));
+    console.log(this.vehicle);
   }
 
   onSubmit() {
     this.homeService.createVehicleParking(this.vehicle).subscribe(v => console.log(v));
+    console.log(this.vehicle);
   }
 
   loadAllVehicles() {
@@ -58,10 +60,4 @@ export class HomeComponent implements OnInit {
     }
     );
   }
-
-  saveVehicle(){
-    
-  }
-
-
 }
