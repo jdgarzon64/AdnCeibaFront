@@ -1,35 +1,57 @@
 .principal-card{
-    background-color: blue;;
+    
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    height: 30vh;
+    height: auto;
     border-color: azure;
     border-width: 1px;
     border-style: solid;
     margin-top: 10%;
     padding: 0px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5b8f9a+0,4a3963+43,41314e+100,2989d8+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+10,4a3963+38,41314e+100,2989d8+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+5,4a3963+34,41314e+59,41314e+59,41314e+59,6d345d+81,6d345d+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+5,4a3963+23,6d345d+100 */
+background: #5fa3a4; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .field {
-    color: black !important;
+    color: aqua !important;
 }
 .button-save{
-    background-color: brown !important;
+    background-color: #4a3963 !important;
+    color: aqua !important;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
 }
 .formRegistry{
-    height: 100%;
-    background-color: aqua;
+
 }
 .tableParking{
     width: 70vw;
     height: 40vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: crimson;
     border-color: azure;
     border-width: 1px;
     border-style: solid;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+5,4a3963+23,6d345d+100 */
+background: #5fa3a4; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .mat-form-field{
     margin: 20px;
+    caret-color: aliceblue ;
+}
+.error{
+    color: aliceblue;
 }

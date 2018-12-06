@@ -7,6 +7,18 @@
     overflow: hidden !important;
 }
 body{
-    background-color: blueviolet;
+    background: -moz-linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
+    background: linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
+    height: 100%;
+    width: 100%;
+
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+    height: 100%;
+    width: 100%;
+}

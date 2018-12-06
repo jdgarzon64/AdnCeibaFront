@@ -11,6 +11,7 @@ import { Vehicle } from '../model/vehicle';
 export class HomeComponent implements OnInit {
   matcher = new ErrorState();
   vehicle: Vehicle = new Vehicle();
+  vehiclePayment: Vehicle = new Vehicle();
   vehicleType = ['Car', 'Motorcycle'];
   registryVehicle: FormGroup;
   paymentVehicle: FormGroup;
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
     this.registryVehicle = this.fb.group({
       licence: ['', Validators.compose([Validators.required])],
       engine: ['', Validators.compose([Validators.required])],
+      type: ['', Validators.compose([Validators.required])]
     });
 
     this.paymentVehicle = this.fb.group({
@@ -33,9 +35,9 @@ export class HomeComponent implements OnInit {
   }
 
   generatePayment() {
-    console.log('dadasdasda');
+    console.log(this.vehiclePayment);
   }
   onSubmit() {
-    console.log('eqwewqewqe');
+    console.log(this.vehicle);
   }
 }

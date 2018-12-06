@@ -10,13 +10,13 @@
                 </mat-error>
             </mat-form-field>
             <mat-form-field class="field">
-                <mat-select placeholder="Select Vehicle">
-                    <mat-option *ngFor="let type of vehicleType" [value]="type">{{type}}
+                <mat-select placeholder="Select Vehicle" class="select"  [(ngModel)]="vehicle.type"  formControlName="type">
+                    <mat-option *ngFor="let type of vehicleType" [value]="type" >{{type}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="field">
-                <input type="text" matInput placeholder="Engine" name="engine" (ngModel)="vehicle.engine" class="form-control"
+                <input type="text" matInput placeholder="Engine" name="engine" [(ngModel)]="vehicle.engine" class="form-control"
                     formControlName="engine" [errorStateMatcher]="matcher">
                 <mat-error class="error" *ngIf="registryVehicle.controls.engine.hasError('required')">
                     please, complete all the fields
@@ -26,34 +26,22 @@
             <button mat-button class="button-save" type="submit" [disabled]="!registryVehicle.valid" name="button">Save
                 Car</button>
 
-                <form [formGroup]="paymentVehicle" (ngSubmit)="generatePayment()">
-                    <mat-form-field class="field">
-                        <input type="text" matInput placeholder="Licence" name="payLicence" (ngModel)="vehicle.licence" 
-                            formControlName="payLicence" [errorStateMatcher]="matcher">
-                        <mat-error class="error" *ngIf="paymentVehicle.controls.payLicence.hasError('required')">
-                            please, complete all the fields
-                        </mat-error>
-                    </mat-form-field>
-                    <button mat-button class="button-save"  [disabled]="!paymentVehicle.valid">Payment</button>
-        
-                </form>
+            <form [formGroup]="paymentVehicle" (ngSubmit)="generatePayment()">
+                <mat-form-field class="field">
+                    <input type="text" matInput placeholder="Licence" name="payLicence" [(ngModel)]="vehiclePayment.licence"
+                        formControlName="payLicence" [errorStateMatcher]="matcher">
+                    <mat-error class="error" *ngIf="paymentVehicle.controls.payLicence.hasError('required')">
+                        please, complete all the fields
+                    </mat-error>
+                </mat-form-field>
+                <button mat-button class="button-save" [disabled]="!paymentVehicle.valid">Payment</button>
+
+            </form>
         </form>
     </div>
-
-
-
-
-
-    <div class="formPayment">
-      
-    </div>
-
-
-
-
-
 </div>
-
+<br>
+<br>
 <div class="tableParking">
 
 </div>

@@ -1,3 +1,4 @@
+import { HomeService } from './home/service/home.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,7 +16,7 @@ import { HomeModule } from './home/home.module';
     BrowserAnimationsModule,
     HomeModule
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
