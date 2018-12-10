@@ -1,3 +1,4 @@
+import { DollarPriceModule } from './general/dollar-price/dollar-price.module';
 import { PaymentModule } from './payment/payment.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -28,7 +29,8 @@ import { PopUpMessageComponent } from './general/pop-up-message/pop-up-message.c
     MatToolbarModule,
     MatButtonModule,
     PaymentModule,
-    DisponibilityModule
+    DisponibilityModule,
+    DollarPriceModule
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
