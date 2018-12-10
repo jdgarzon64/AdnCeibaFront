@@ -14,7 +14,8 @@ import { PopUpMessageComponent } from '../general/pop-up-message/pop-up-message.
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  messageOk = 'The Vehicle Has Been Registered!';
+  messageBadRequest = 'Please complete the fields correctly';
   matcher = new ErrorState();
   vehicle: Vehicle = new Vehicle();
   vehicleType = ['Car', 'Motorcycle'];
@@ -41,9 +42,9 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     this.homeService.createVehicleParking(this.vehicle)
     .subscribe((v: any) => {
-      this.loadResponse(v);
+      this.loadResponse(this.messageOk);
     }, (error: any) => {
-      console.log(error);
+      this.loadResponse(this.messageBadRequest);
     });
   }
 
@@ -58,17 +59,19 @@ export class HomeComponent implements OnInit {
   }
 
 
-loadResponse(parking: Parking) {
+loadResponse(message: any) {
   const dialogConfig = new MatDialogConfig();
   dialogConfig.width = '300px';
   dialogConfig.height = '255px';
 
   dialogConfig.data = {
-    parking: parking
+    message: message
   };
-  const dialogRef = this.dialog.open(PopUpMessageComponent, dialogConfig);
-
+  this.dialog.open(PopUpMessageComponent, dialogConfig);
+  this.cleanFields();
 }
-
+cleanFields() {
+  this.registryVehicle.reset();
+}
 
 }
