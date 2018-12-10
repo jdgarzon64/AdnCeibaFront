@@ -1,10 +1,12 @@
 import { Parking } from './../model/parking';
-import { HomeService } from './service/home.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ErrorState } from '../share/error-matcher';
+import { ErrorState } from '../shared/error-matcher';
 import { Vehicle } from '../model/vehicle';
 import { HttpClient } from '@angular/common/http';
+import { HomeService } from '../general/service/home.service';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { PopUpMessageComponent } from '../general/pop-up-message/pop-up-message.component';
 
 @Component({
   selector: 'app-home',
@@ -15,13 +17,12 @@ export class HomeComponent implements OnInit {
 
   matcher = new ErrorState();
   vehicle: Vehicle = new Vehicle();
-  vehiclePayment: Vehicle = new Vehicle();
   vehicleType = ['Car', 'Motorcycle'];
   registryVehicle: FormGroup;
-  paymentVehicle: FormGroup;
   vehicleList: Parking[];
 
-  constructor(private fb: FormBuilder, private homeService: HomeService, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private homeService: HomeService,
+     private http: HttpClient, public dialog: MatDialog) {
     this.buildForm();
     this.loadAllVehicles();
   }
@@ -35,20 +36,15 @@ export class HomeComponent implements OnInit {
       engine: ['', Validators.compose([Validators.required])],
       type: ['', Validators.compose([Validators.required])]
     });
-
-    this.paymentVehicle = this.fb.group({
-      payLicence: ['', Validators.compose([Validators.required])]
-    });
-  }
-
-  generatePayment() {
-    this.homeService.generatePayment(this.vehiclePayment).subscribe(v => console.log(v));
-    console.log(this.vehicle);
   }
 
   onSubmit() {
-    this.homeService.createVehicleParking(this.vehicle).subscribe(v => console.log(v));
-    console.log(this.vehicle);
+    this.homeService.createVehicleParking(this.vehicle)
+    .subscribe((v: any) => {
+      this.loadResponse(v);
+    }, (error: any) => {
+      console.log(error);
+    });
   }
 
   loadAllVehicles() {
@@ -60,4 +56,19 @@ export class HomeComponent implements OnInit {
     }
     );
   }
+
+
+loadResponse(parking: Parking) {
+  const dialogConfig = new MatDialogConfig();
+  dialogConfig.width = '300px';
+  dialogConfig.height = '255px';
+
+  dialogConfig.data = {
+    parking: parking
+  };
+  const dialogRef = this.dialog.open(PopUpMessageComponent, dialogConfig);
+
+}
+
+
 }

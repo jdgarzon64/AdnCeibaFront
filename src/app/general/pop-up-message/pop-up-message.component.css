@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+.dialogCard {
+    height: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Handlee', cursive !important;
+  background: #5fa3a4; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.text {
+    text-align: left;
+  }
+.buttonContainer {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+.buttons {
+    width: 40%;
+    height: 60px;
+    color: black;
+    background-color: #66074b;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Handlee', cursive;
+    border: none;
+    cursor: pointer;
+  }
+
+  ::ng-deep .mat-dialog-container {
+    padding: 0px;
+      overflow: hidden !important;
+  }
+  

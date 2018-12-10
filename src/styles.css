@@ -4,7 +4,7 @@
     margin:0;
     /* background-image:url('./app/imagenes/fondo.jpg'); */
    
-    overflow: hidden !important;
+
 }
 body{
     background: -moz-linear-gradient(45deg, rgba(45,36,63,1) 0%, rgba(65,49,78,1) 100%);
