@@ -26,7 +26,7 @@ export class HomeService {
   generatePayment(vehicle: Vehicle): Observable<Payment> {
     return this.http.post<Payment>('http://localhost:8080/payment', vehicle, this.httpOptions);
   }
-  getCurrentDollarPrice(): Observable<Dollar> {
-    return this.http.get<Dollar>('http://apilayer.net/api/live?access_key=0f4a367588adfa114511127a54fa16c5&currencies=COP');
+  getCurrentDollarPrice(): Observable<any> {
+    return this.http.get<any>('http://free.currencyconverterapi.com/api/v5/convert?q=USD_COP&compact=y');
   }
 }

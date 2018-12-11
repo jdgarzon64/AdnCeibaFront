@@ -8,14 +8,16 @@ import { HomeService } from '../service/home.service';
   styleUrls: ['./dollar-price.component.css']
 })
 export class DollarPriceComponent implements OnInit {
-  dollar: Dollar = new Dollar();
+  dollar: any;
   constructor( private homeService: HomeService) { }
   ngOnInit() {
+    this.getCurrentDollarValue();
   }
   getCurrentDollarValue() {
-    this.homeService.getCurrentDollarPrice().subscribe((x) => {
+    this.homeService.getCurrentDollarPrice().subscribe(x => {
+      console.log(x);
        this.dollar = x;
-       //console.log(x);
+       this.dollar = this.dollar.USD_COP.val;
     });
   }
 }

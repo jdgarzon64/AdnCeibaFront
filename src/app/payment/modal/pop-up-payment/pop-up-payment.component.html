@@ -1,0 +1,15 @@
+<div class="dialogCard">
+  <div  class="text">
+      <p>Type {{payment.vehicle.vehicleType.type}}</p>
+      <p>Licence: {{payment.vehicle.licenceNumber}}</p>
+      <p>Engine: {{payment.vehicle.engine}}</p>
+      <p>CheckIn: {{payment.hourCheckIn | date: 'medium'}}</p>
+      <p>CheckOut: {{payment.hourCheckOut | date: 'medium'}}</p>
+      <p>Hours Inside: {{payment.timeInside}}</p>
+      <p>Price by Hour: {{payment.priceByHour}}</p>
+      <p>Total Price: {{payment.totalPrice}}</p>
+  </div>
+  <div class="buttonContainer">
+    <button mat-button class="buttons" (click)="onClickPositiveResponse()">Accept</button>
+  </div>
+</div>

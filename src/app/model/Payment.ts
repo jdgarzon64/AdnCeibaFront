@@ -4,9 +4,9 @@ export class Payment {
     idPayment: number;
     licenceNumber: string;
     engine: string;
-    hourCheckIn: string;
-    hourCheckOut: string;
-    timeInside: string;
+    hourCheckIn: Date;
+    hourCheckOut: Date;
+    timeInside: Number;
     priceByHour: string;
     totalPrice: string;
     vehicle: Vehicle;
