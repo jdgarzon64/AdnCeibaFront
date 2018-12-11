@@ -2,7 +2,7 @@
 .dialogCard {
     height: 100%;
   padding: 10px;
-  color: aqua;
+  color: cornsilk;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: 'Handlee', cursive !important;
@@ -26,7 +26,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', end
 .buttons {
     width: 40%;
     height: 60px;
-    color: black;
+    color: cornsilk;
     background-color: #66074b;
     font-size: 16px;
     font-weight: bold;

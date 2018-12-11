@@ -1,11 +1,13 @@
 import { DisponibilityComponent } from './disponibility.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [DisponibilityComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule
   ],
   exports: [ DisponibilityComponent ]
 })

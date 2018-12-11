@@ -4,8 +4,6 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Parking } from 'src/app/model/parking';
 import { Payment } from 'src/app/model/Payment';
-import { Dollar } from 'src/app/model/dollar';
-
 
 @Injectable({
   providedIn: 'root'

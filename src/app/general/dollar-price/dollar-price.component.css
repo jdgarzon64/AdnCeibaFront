@@ -5,7 +5,6 @@
     margin-right: auto;
     width: 70%;
     height: auto;
-    border-color: azure;
     border-width: 1px;
     border-style: solid;
     margin-top: 10%;
@@ -24,14 +23,14 @@ background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .field {
-    color: aqua !important;
+    color: cornsilk !important;
     display: flex;
     flex: auto;
     justify-content: center;
 }
 .button-save{
     background-color: #4a3963 !important;
-    color: aqua !important;
+    color: cornsilk !important;
     border-color: black;
     border-width: 1px;
     border-style: solid;
