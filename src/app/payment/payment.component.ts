@@ -7,6 +7,7 @@ import { Vehicle } from '../model/vehicle';
 import { HttpClient } from '@angular/common/http';
 import { HomeService } from '../general/service/home.service';
 import { MatDialog, MatDialogConfig, MatSnackBar } from '@angular/material';
+import { InputPayment } from '../general/dto/input-payment';
 
 @Component({
   selector: 'app-payment',
@@ -14,13 +15,13 @@ import { MatDialog, MatDialogConfig, MatSnackBar } from '@angular/material';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  messageOk = 'Transaction Complete';
-  messageFail = 'We cant Find the Vehicle';
+  message = '';
+  // messageFail = 'This Vehicle Doesnt Exist';
   matcher = new ErrorState();
   vehiclePayment: Vehicle = new Vehicle();
   paymentVehicle: FormGroup;
   constructor(private fb: FormBuilder, private homeService: HomeService,
-    public dialog: MatDialog, private http: HttpClient,public snackBar: MatSnackBar) {
+    public dialog: MatDialog, private http: HttpClient, public snackBar: MatSnackBar) {
     this.buildForm();
   }
   ngOnInit() {
@@ -33,19 +34,20 @@ export class PaymentComponent implements OnInit {
   generatePayment() {
     this.homeService.generatePayment(this.vehiclePayment).subscribe(v => {
       console.log(v);
-      this.loadResponse(v, this.messageOk);
+      this.message = v.message;
+      this.loadResponse(v);
     }, error => {
-      this.snackbarMessage(this.messageFail);
+      this.snackbarMessage(error.error.message);
     });
   }
 
-  loadResponse(payment: Payment, message: string) {
+  loadResponse(payment: InputPayment) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '350px';
     dialogConfig.height = '400px';
     dialogConfig.data = {
-      payment: payment,
-      message: message
+      payment: payment.payment,
+      message: payment.message
     };
     this.dialog.open(PopUpPaymentComponent, dialogConfig);
     this.cleanFields();

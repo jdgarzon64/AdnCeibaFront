@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Parking } from 'src/app/model/parking';
-import { Payment } from 'src/app/model/Payment';
+import { InputParking } from '../dto/input-parking';
+import { InputPayment } from '../dto/input-payment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,12 @@ export class HomeService {
     return this.http.get<Parking[]>('http://localhost:8080/getall');
   }
 
-  createVehicleParking(vehicle: Vehicle): Observable<Vehicle[]> {
-    return this.http.post<Vehicle[]>('http://localhost:8080/save', vehicle, this.httpOptions);
+  createVehicleParking(vehicle: Vehicle): Observable<InputParking> {
+    return this.http.post<InputParking>('http://localhost:8080/save', vehicle, this.httpOptions);
   }
 
-  generatePayment(vehicle: Vehicle): Observable<Payment> {
-    return this.http.post<Payment>('http://localhost:8080/payment', vehicle, this.httpOptions);
+  generatePayment(vehicle: Vehicle): Observable<InputPayment> {
+    return this.http.post<InputPayment>('http://localhost:8080/payment', vehicle, this.httpOptions);
   }
   getCurrentDollarPrice(): Observable<any> {
     return this.http.get<any>('http://free.currencyconverterapi.com/api/v5/convert?q=USD_COP&compact=y');
