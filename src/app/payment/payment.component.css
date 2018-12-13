@@ -7,11 +7,14 @@
     border-style: solid;
     margin-top: 10%;
     padding: 0px;
-background: #5fa3a4; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/*
+background: #5fa3a4; 
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); 
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); 
+*/
+background-color: aliceblue;
 }
 .field {
     color: cornsilk !important;
@@ -29,4 +32,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', end
 }
 .error{
     color: aliceblue;
+}
+.tittle{
+    background: #5fa3a4; 
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); 
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); 
+    color: cornsilk !important;
+    text-align: center;
 }

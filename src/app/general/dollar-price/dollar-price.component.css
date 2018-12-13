@@ -9,24 +9,25 @@
     border-style: solid;
     margin-top: 10%;
     padding: 0px;
-    display: flex;
-    flex-direction: row;
-
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5b8f9a+0,4a3963+43,41314e+100,2989d8+100 */
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+10,4a3963+38,41314e+100,2989d8+100 */
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+5,4a3963+34,41314e+59,41314e+59,41314e+59,6d345d+81,6d345d+100 */
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fa3a4+5,4a3963+23,6d345d+100 */
-background: #5fa3a4; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+/*background: #5fa3a4; 
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); 
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); 
+*/
+background-color: aliceblue;
 }
 .field {
-    color: cornsilk !important;
+    color: darkmagenta;
     display: flex;
     flex: auto;
     justify-content: center;
+    padding: 1%;
 }
 .button-save{
     background-color: #4a3963 !important;
@@ -41,4 +42,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', end
 }
 .error{
     color: aliceblue;
+}
+.tittle{
+    background: #5fa3a4; 
+background: -moz-linear-gradient(-45deg, #5fa3a4 5%, #4a3963 23%, #6d345d 100%); 
+background: -webkit-linear-gradient(-45deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+background: linear-gradient(135deg, #5fa3a4 5%,#4a3963 23%,#6d345d 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa3a4', endColorstr='#6d345d',GradientType=1 ); 
+    color: cornsilk !important;
+    text-align: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    padding: 5px; 
 }

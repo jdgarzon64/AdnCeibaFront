@@ -22,8 +22,7 @@ export class HomeComponent implements OnInit {
   registryVehicle: FormGroup;
   vehicleList: Parking[];
 
-  constructor(private fb: FormBuilder, private homeService: HomeService,
-     private http: HttpClient, public dialog: MatDialog) {
+  constructor(private fb: FormBuilder, private homeService: HomeService, public dialog: MatDialog) {
     this.buildForm();
     this.loadAllVehicles();
   }
@@ -44,7 +43,7 @@ export class HomeComponent implements OnInit {
     .subscribe((v: any) => {
       this.loadResponse(this.messageOk);
     }, (error: any) => {
-      this.loadResponse(this.messageBadRequest);
+      this.loadResponse(error.error.message);
     });
   }
 
@@ -53,7 +52,7 @@ export class HomeComponent implements OnInit {
       this.vehicleList = data;
       console.log(this.vehicleList);
     }, error => {
-      console.error(error);
+      this.loadResponse(error.error.message);
     }
     );
   }
